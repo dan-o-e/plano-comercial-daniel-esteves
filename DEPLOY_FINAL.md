@@ -14,8 +14,8 @@
 5. Deploy!
 
 ## ✅ Passo 3: Banco de Dados
-1. Crie conta no ElephantSQL (gratuito)
-2. Crie instância PostgreSQL
+1. Crie conta no Supabase (gratuito e generoso)
+2. Crie novo projeto PostgreSQL
 3. Execute `import_excel_to_postgres.py` com as novas credenciais
 4. Importe seus dados
 
@@ -24,11 +24,11 @@
 2. Cole as credenciais do banco:
 ```toml
 [database]
-host = "seu-host.elephantsql.com"
+host = "db.xxxxxxxxxxxxx.supabase.co"
 port = 5432
-user = "seu_usuario"
+user = "postgres"
 password = "sua_senha"
-database = "seu_usuario"
+database = "postgres"
 ```
 
 ## 🎯 RESULTADO:

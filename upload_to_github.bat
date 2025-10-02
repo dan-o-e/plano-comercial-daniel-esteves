@@ -1,32 +1,53 @@
 @echo off
 echo ========================================
-echo   ENVIANDO PARA GITHUB
+echo   SINCRONIZANDO COM GITHUB
 echo ========================================
 echo.
 
-REM Inicializar repositório Git
+REM Verificar se é inicialização ou atualização
+if exist .git (
+    echo Repositório Git já existe. Fazendo atualização...
+    goto UPDATE
+) else (
+    echo Inicializando novo repositório Git...
+    goto INIT
+)
+
+:INIT
+echo.
+echo === INICIALIZANDO REPOSITÓRIO ===
 git init
-
-REM Adicionar todos os arquivos
 git add .
-
-REM Fazer primeiro commit
 git commit -m "Initial commit - Plano Comercial Daniel Esteves"
-
-REM Conectar com seu repositório GitHub
-echo.
-echo IMPORTANTE: Substitua SEU_USUARIO pelo seu username do GitHub
-echo Exemplo: se seu usuario eh 'danielesteves', use:
-echo git remote add origin https://github.com/danielesteves/plano-comercial-daniel-esteves.git
-echo.
-pause
-
-REM Configurar branch principal
 git branch -M main
-
 echo.
-echo Agora execute manualmente:
+echo PRÓXIMO PASSO:
+echo 1. Crie um repositório no GitHub chamado: plano-comercial-daniel-esteves
+echo 2. Execute os comandos abaixo (substitua SEU_USUARIO):
+echo.
 echo git remote add origin https://github.com/SEU_USUARIO/plano-comercial-daniel-esteves.git
 echo git push -u origin main
 echo.
+goto END
+
+:UPDATE
+echo.
+echo === ATUALIZANDO REPOSITÓRIO ===
+git status
+echo.
+git add .
+echo Digite a mensagem do commit (ex: Atualização do dashboard):
+set /p commit_msg="Mensagem: "
+if "%commit_msg%"=="" set commit_msg=Atualização automática
+git commit -m "%commit_msg%"
+git push
+echo.
+echo ✅ Atualização enviada para GitHub!
+goto END
+
+:END
+echo.
+echo ========================================
+echo   PROCESSO CONCLUÍDO
+echo ========================================
 pause
