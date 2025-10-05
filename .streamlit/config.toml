@@ -1,7 +1,7 @@
-# Configuração para Streamlit Cloud
+# Configuração para Streamlit - Local e Cloud
 
 [server]
-headless = true
+headless = false
 enableXsrfProtection = false
 
 [theme]

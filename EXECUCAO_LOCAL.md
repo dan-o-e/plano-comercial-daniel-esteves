@@ -4,17 +4,22 @@
 
 ### 🚀 Formas de Executar:
 
-#### **Opção 1 - Mais Simples:**
-```bash
-python -m streamlit run streamlit_app.py
+#### **Opção 1 - Com abertura automática do navegador:**
+```
+run_com_browser.bat
 ```
 
-#### **Opção 2 - Script Automatizado:**
+#### **Opção 2 - Mais Simples:**
+```bash
+python -m streamlit run streamlit_app.py --server.headless=false
+```
+
+#### **Opção 3 - Script automatizado:**
 ```
 run_simple.bat
 ```
 
-#### **Opção 3 - Com tratamento de erros:**
+#### **Opção 4 - Com tratamento de erros:**
 ```
 run_local.bat
 ```
