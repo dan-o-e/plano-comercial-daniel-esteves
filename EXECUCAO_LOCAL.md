@@ -30,9 +30,10 @@ run_local.bat
 
 ### ⚠️ Ignorar Warnings:
 Os warnings que aparecem são normais e **NÃO afetam o funcionamento**:
-- `"general.email" is not a valid config option` ✅ OK
-- `Warning: the config option 'server.enableCORS=false'` ✅ OK  
-- `Failed to schedule watch observer` ✅ OK
+- `"general.email" is not a valid config option` ✅ OK - Opção removida em versões recentes
+- `Warning: the config option 'server.enableCORS=false'` ✅ OK - Ajuste automático de segurança
+- `Failed to schedule watch observer` ✅ OK - Problema conhecido Python 3.13 + Windows
+- `TypeError: 'handle' must be a _ThreadHandle` ✅ OK - Não afeta o funcionamento
 
 ### 🔧 Troubleshooting:
 

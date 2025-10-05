@@ -1,11 +1,8 @@
 # Configuração para Streamlit Cloud
 
-[general]
-email = ""
-
 [server]
 headless = true
-enableCORS = false
+enableXsrfProtection = false
 
 [theme]
 primaryColor = "#1f77b4"
